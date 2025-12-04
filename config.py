@@ -1,0 +1,11 @@
+NODE_ID = "fre-node-01"
+
+P2P_PORT = 9000
+API_PORT = 7000
+
+VERSION = "1.0.0"
+
+ANCHOR_ADDRESS = "EQXXXXXXXXXXXXXXXXXXXXXXXX"
+L1_RPC = "https://toncenter.com/api/v2/jsonRPC"
+
+MIN_REQUIRED_VERSION = "1.0.0"
