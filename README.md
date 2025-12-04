@@ -14,4 +14,4 @@ Fonctionnalités :
 Installation :
 
 ```bash
-curl -s https://raw.githubusercontent.com/ton_repo/fre-node/main/scripts/install.sh | bash
+curl -s https://raw.githubusercontent.com/FRANCNUMERIQUE/fre-node/main/scripts/install.sh | bash
