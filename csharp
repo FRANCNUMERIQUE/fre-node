@@ -1,0 +1,5 @@
+git init
+git remote add origin https://github.com/FRANCNUMERIQUE/fre-node.git
+git add .
+git commit -m "Initial FRE-L2 node"
+git push -u origin main
