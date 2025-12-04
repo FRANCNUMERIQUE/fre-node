@@ -1,18 +1,18 @@
 from fre_node.validator import Validator
-from fre_node.consensus import Consensus
 from fre_node.network import NodeNetwork
 from fre_node.ledger import Ledger
 from fre_node.block_builder import BlockBuilder
 from fre_node.anchor_client import AnchorClient
+from fre_node.consensus import Consensus
 from fre_node.config import *
 
 import time
 
-print(f"[FRE-NODE] Démarrage du nœud {NODE_ID} - version {VERSION}")
+print(f"[FRE-NODE] Démarrage du nœud : {NODE_ID}")
 
 ledger = Ledger()
-validator = Validator()
 network = NodeNetwork()
+validator = Validator()
 builder = BlockBuilder(ledger)
 anchor = AnchorClient()
 consensus = Consensus(network, ledger, anchor)
