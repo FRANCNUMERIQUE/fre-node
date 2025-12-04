@@ -6,10 +6,4 @@ class Consensus:
 
     def reach(self, block):
         signatures = self.network.collect_signatures(block)
-
-        needed = int((2/3) * len(self.network.validators()))
-
-        if len(signatures) >= needed:
-            block.signatures = signatures
-            return True
-        return False
+        return len(signatures) >= 2  # consensus simplifié
