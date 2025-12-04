@@ -1,0 +1,5 @@
+
+requests
+websockets
+pynacl
+urllib3
