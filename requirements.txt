@@ -1,3 +1,4 @@
+nano requirements.txt
 
 requests
 websockets
