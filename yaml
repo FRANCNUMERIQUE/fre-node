@@ -1,0 +1,10 @@
+
+---
+
+# 🟩 **2. requirements.txt**
+
+```txt
+requests
+websockets
+pynacl
+urllib3
