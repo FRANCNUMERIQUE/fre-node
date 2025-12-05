@@ -7,6 +7,20 @@ from fre_node.block_builder import BlockBuilder
 from fre_node.anchor_client import AnchorClient
 from fre_node.config import NODE_NAME
 
+import requests
+
+DISCORD_WEBHOOK = "https://discord.com/api/webhooks/1446582993002037350/H_tC0C0XEejMcT0OGvDCmNRgtAUPe_R5MYU_Kz-LaBvVqZAv-IpfPEIghkaRdNXi2LEa"
+
+def send_discord(message):
+    try:
+        requests.post(
+            DISCORD_WEBHOOK,
+            json={"content": message},
+            timeout=2
+        )
+    except:
+        pass  # on ignore les erreurs réseau
+
 
 class Node:
     """Nœud FRE Layer 2"""
