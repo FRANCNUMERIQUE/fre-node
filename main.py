@@ -43,6 +43,9 @@ class Node:
 
             # Ajouter le bloc au ledger
             self.ledger.add_block(block)
+            
+            # 🔥 Notification Discord
+            send_discord(f"📦 Nouveau bloc validé par {self.name} — ID: {block['id']}")
 
             # Émettre le bloc sur le réseau
             self.network.broadcast_block(block)
