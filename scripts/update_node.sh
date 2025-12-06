@@ -1,24 +1,21 @@
 #!/bin/bash
 
 # ------------------------------
-# CONFIG NOTIFICATIONS DISCORD
-# ------------------------------
-DISCORD_WEBHOOK="https://discord.com/api/webhooks/1446582993002037350/H_tC0C0XEejMcT0OGvDCmNRgtAUPe_R5MYU_Kz-LaBvVqZAv-IpfPEIghkaRdNXi2LEa"
-
-send_discord() {
-    MESSAGE="$1"
-    curl -H "Content-Type: application/json" \
-         -X POST \
-         -d "{\"content\":\"$MESSAGE\"}" \
-         $DISCORD_WEBHOOK >/dev/null 2>&1
-}
-
-# ------------------------------
 # CONFIG NODE
 # ------------------------------
 
 LOG_FILE="/home/aliasvava/fre-node/update/update.log"
 NODE_DIR="/home/aliasvava/fre-node"
+WEBHOOK_URL="https://discord.com/api/webhooks/1446582993002037350/H_tC0C0XEejMcT0OGvDCmNRgtAUPe_R5MYU_Kz-LaBvVqZAv-IpfPEIghkaRdNXi2LEa"  # <-- Mets ton URL ici
+
+send_discord() {
+    MESSAGE="$1"
+    curl -H "Content-Type: application/json" \
+        -X POST \
+        -d "{\"content\": \"$MESSAGE\"}" \
+        $WEBHOOK_URL > /dev/null 2>&1
+}
+
 VENV="$NODE_DIR/venv/bin/python3"
 BACKUP_DIR="$NODE_DIR/.backup"
 
