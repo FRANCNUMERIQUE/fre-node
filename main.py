@@ -43,6 +43,9 @@ class Node:
 
             # Ajouter le bloc au ledger
             self.ledger.add_block(block)
+            with open("last_block.txt", "a") as f:
+                f.write(str(block["id"]) + "\n")
+
             
             # 🔥 Notification Discord
             send_discord(f"📦 Nouveau bloc validé par {self.name} — ID: {block['id']}")
